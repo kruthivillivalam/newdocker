@@ -1,41 +1,14 @@
 FROM tngnt/meteorbase
-FROM node:8.1.2
-
-MAINTAINER Azure App Services Container Images <appsvc-images@microsoft.com>
 
 
-
-#Hello
-COPY init_container.sh /bin/
-
-
-
-RUN  npm install -g pm2 \
-
-  && mkdir /pm2home \
-
-  && chmod 777 /pm2home \
-
-  && rm -rf /pm2home/logs \
-
-  && ln -s /home/LogFiles /pm2home/logs \
-
-  && echo "root:Docker!" | chpasswd \
-
-  && apt update \
-
-  && apt install -y --no-install-recommends openssh-server \
-
-  && chmod 755 /bin/init_container.sh 
-
-
+RUN apt-get update \ 
+  && apt-get install -y --no-install-recommends openssh-server \
+  && echo "root:Docker!" | chpasswd
+  
 
 COPY sshd_config /etc/ssh/
-
-
-
-EXPOSE 2222
-
-
-
+EXPOSE 2222 80
+  
+COPY init_container.sh /bin/
+RUN chmod 755 /bin/init_container.sh 
 CMD ["/bin/init_container.sh"]
