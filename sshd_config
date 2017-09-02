@@ -37,4 +37,3 @@ PasswordAuthentication 	yes
 PermitEmptyPasswords 	no
 
 PermitRootLogin 	yes
-
