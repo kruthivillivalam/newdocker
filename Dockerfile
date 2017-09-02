@@ -1,5 +1,5 @@
 FROM tngnt/meteorbase
-#FROM node:8.1.2
+FROM node:8.1.2
 
 MAINTAINER Azure App Services Container Images <appsvc-images@microsoft.com>
 
