@@ -5,6 +5,7 @@ MAINTAINER Azure App Services Container Images <appsvc-images@microsoft.com>
 
 
 
+#Hello
 COPY init_container.sh /bin/
 
 
