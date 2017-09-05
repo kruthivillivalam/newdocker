@@ -11,4 +11,4 @@ EXPOSE 2222 80
   
 COPY init_container.sh /bin/
 RUN chmod 755 /bin/init_container.sh 
-CMD ["/bin/init_container.sh"]
+ENTRYPOINT ["/bin/init_container.sh"]
