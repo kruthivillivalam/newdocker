@@ -1,0 +1,30 @@
+{
+
+  "name": "default-static-site",
+
+  "version": "1.0.0",
+
+  "description": "Express-driven static site hosted from default App Service wwwroot directory",
+
+  "main": "default-static-site.js",
+
+  "dependencies": {
+
+    "http":"*",
+    "express": "4.15.3"
+
+  },
+
+  "devDependencies": {},
+
+  "scripts": {
+
+    "start": "node /opt/startup/app.js"
+
+  },
+
+  "author": "Azure App Services Container Images <appsvc-images@microsoft.com>",
+
+  "license": "Apache-2.0"
+
+}

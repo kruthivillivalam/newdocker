@@ -3,6 +3,10 @@ MAINTAINER Azure App Services Container Images <appsvc-images@microsoft.com>
 
 
 COPY sshd_config /etc/ssh/
+COPY startup /opt/startup
+
+RUN cd /opt/startup \
+  && npm install
 
 RUN mkdir -p /home/LogFiles \
      && echo "root:Docker!" | chpasswd \
