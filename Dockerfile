@@ -13,6 +13,8 @@ RUN mkdir -p /home/LogFiles \
      && apt update \
      && apt install -y --no-install-recommends openssh-server
 
+	 
+#TRy again
 
 
 EXPOSE 2222 8080
