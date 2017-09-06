@@ -3,9 +3,9 @@ MAINTAINER Azure App Services Container Images <appsvc-images@microsoft.com>
 
 
 COPY sshd_config /etc/ssh/
-COPY startup /opt/startup
+COPY startup /opt/
 
-RUN cd /opt/startup \
+RUN cd /opt \
   && npm install
 
 RUN mkdir -p /home/LogFiles \
@@ -26,4 +26,4 @@ ENV PATH ${PATH}:/home/site/wwwroot
 
 WORKDIR /home/site/wwwroot
 
-ENTRYPOINT ["/opt/startup/init_container.sh"]
+ENTRYPOINT ["/opt/init_container.sh"]
