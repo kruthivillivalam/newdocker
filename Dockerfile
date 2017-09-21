@@ -11,7 +11,8 @@ RUN cd /opt \
 RUN mkdir -p /home/LogFiles \
      && echo "root:Docker!" | chpasswd \
      && apt update \
-     && apt install -y --no-install-recommends openssh-server
+     && apt install -y --no-install-recommends openssh-server \
+     && chmod 777 /opt/init_container.sh
 
 	 
 #TRy again
